@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+</head>
+<body>
+<a class="uipw-form_call_modal fancybox" href="#uipw-form_call_modal">Обратный звонок</a>
+<form method="POST" action="" id="uipw-form_call_modal">
+    <h4>Обратный звонок</h4>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+    <div class="error"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate?</p></div>
+    <div class="uipw-modal_form_fields">
+        <div>
+            <label for="call_name">Имя<sup>*</sup></label>
+            <input id="call_name" value="" type="text" tabindex="1">
+        </div>
+        <div>
+            <label for="call_phone">Телефон<sup>*</sup></label>
+            <input id="call_phone" class="error" value="" type="tel" tabindex="2">
+        </div>
+        <div>
+            <label for="call_email">E-mail<sup>*</sup></label>
+            <input id="call_email" value="" type="email" tabindex="3">
+        </div>
+        <input type="submit" value="Отправить &rarr;" tabindex="4">
+    </div>
+</form>
+<br>
+<br>
+
+<a class="uipw-form_question_modal fancybox" href="#uipw-form_question_modal">Задать вопрос</a>
+<form method="POST" action="" id="uipw-form_question_modal">
+    <h4>Задать вопрос</h4>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+    <div class="uipw-modal_form_fields">
+        <div>
+            <label for="question_phone">Телефон<sup>*</sup></label>
+            <input id="question_phone" value="" type="tel" tabindex="1">
+        </div>
+        <div>
+            <label for="questionemail">E-mail<sup>*</sup></label>
+            <input id="questionemail" class="error" value="" type="email" tabindex="2">
+        </div>
+        <label for="question_message">Сообщение<sup>*</sup></label>
+        <textarea id="question_message" tabindex="3"></textarea>
+        <div>
+            <label for="question_file">Добавить файл</label>
+            <input type='file' id="question_file" name='files[]' multiple/>
+        </div>
+        <input type="submit" value="Отправить &rarr;" tabindex="4">
+    </div>
+</form>
+<br>
+<br>
+
+<a class="uipw-form_goods_modal fancybox" href="#uipw-form_goods_modal">Форма заказа</a>
+<div id="uipw-form_goods_modal">
+    <div class="goods_info">
+        <div class="goods_img"><img src="product.gif" alt=""></div>
+        <h4>Школадное пироженное Choco-Pie</h4>
+        <h3><span class="current-price">30 руб.</span> <sup class="discount">55 руб.</sup></h3>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>Размер</td>
+                <td>600 mm</td>
+            </tr>
+            <tr>
+                <td>Колличество</td>
+                <td>12 шт.</td>
+            </tr>
+            <tr>
+                <td>Высота</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div><!--
+    -->
+    <div class="goods_order">
+        <form method="POST" action="">
+            <h4>Форма заказа</h4>
+            <div class="uipw-modal_form_fields">
+                <div>
+                    <label for="goods_name">Имя<sup>*</sup></label>
+                    <input id="goods_name" value="" type="text" tabindex="1">
+                </div>
+                <div>
+                    <label for="goods_phone">Телефон<sup>*</sup></label>
+                    <input id="goods_phone" class="error" value="" type="tel" tabindex="2">
+                </div>
+                <div>
+                    <label for="goods_email">E-mail<sup>*</sup></label>
+                    <input id="goods_email" value="" type="email" tabindex="3">
+                </div>
+                <input type="submit" value="Отправить &rarr;" tabindex="4">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.uipw-form_call_modal').fancybox({
+            afterLoad: function () {
+                $(".fancybox-wrap").attr('id', 'uipw-call_modal');
+            }
+        });
+        $('.uipw-form_question_modal').fancybox({
+            afterLoad: function () {
+                $(".fancybox-wrap").attr('id', 'uipw-question_modal');
+            }
+        });
+        $('.uipw-form_goods_modal').fancybox({
+            afterLoad: function () {
+                $(".fancybox-wrap").attr('id', 'uipw-goods_modal');
+            }
+        });
+    });
+</script>
+</body>
+</html>
