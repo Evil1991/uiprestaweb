@@ -13,6 +13,14 @@ body {
 #uipw-question_modal,
 #uipw-goods_modal {
   width: 500px !important;
+  max-width: 100% !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   .fancybox-skin {
     border-radius: 0;
     .fancybox-inner {
@@ -44,7 +52,7 @@ body {
 #uipw-form_call_modal,
 #uipw-form_question_modal,
 #uipw-form_goods_modal {
-  padding: 50px 30px;
+  padding: 40px 30px;
   display: none;
   h4, h5 {
     margin: 15px 0;
@@ -241,6 +249,41 @@ body {
           &:nth-of-type(even) {
             text-align: right;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 667px) {
+  #uipw-form_call_modal,
+  #uipw-form_question_modal,
+  #uipw-form_goods_modal {
+    padding: 25px 0;
+  }
+  #uipw-form_question_modal {
+    .uipw-modal_form_fields {
+      > div {
+        display: inline-block;
+        width: 100%;
+        &:nth-of-type(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  #uipw-form_goods_modal {
+    > div {
+      width: 100%;
+      padding: 0 20px;
+      &.goods_info {
+        border-right: none;
+        border-bottom: 1px solid #d7d7d7;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        .goods_img {
+          display: block;
+          margin: 0 auto;
         }
       }
     }
