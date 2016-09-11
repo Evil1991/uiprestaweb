@@ -54,15 +54,15 @@ body {
 #uipw-form_goods_modal {
   padding: 40px 30px;
   display: none;
-  h4, h5 {
+  .title, .description {
     margin: 15px 0;
     text-align: center;
   }
-  h4 {
+  .title {
     margin-top: 0;
     font-size: 2em;
   }
-  h5 {
+  .description {
     color: #454545;
   }
   .error {
@@ -220,12 +220,12 @@ body {
           transform: translate(-50%, -50%);
         }
       }
-      h4 {
+      .title {
         margin: 20px 0;
         font-size: 2.1em;
         line-height: 1;
       }
-      h3 {
+      .price {
         font-weight: 300;
         span {
           font-size: 1.6em;
@@ -281,6 +281,7 @@ body {
         border-bottom: 1px solid #d7d7d7;
         padding-bottom: 20px;
         margin-bottom: 10px;
+        display: none;
         .goods_img {
           display: block;
           margin: 0 auto;
