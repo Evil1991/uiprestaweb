@@ -255,7 +255,7 @@ body {
         #uipw-form_goods_modal > div.goods_info table td:nth-of-type(even) {
           text-align: right; }
 
-@media only screen and (max-device-width: 667px) {
+@media only screen and (max-width: 667px) {
   #uipw-form_call_modal,
   #uipw-form_question_modal,
   #uipw-form_goods_modal {
