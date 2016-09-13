@@ -21,6 +21,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  position: fixed !important;
   .fancybox-skin {
     border-radius: 0;
     .fancybox-inner {
